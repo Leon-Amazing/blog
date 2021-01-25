@@ -1,2 +1,1 @@
-# blog
-my first blog
+# Hello VuePress!
