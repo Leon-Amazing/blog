@@ -1,4 +1,5 @@
 module.exports = {
+    base:'/blog/',
     title: '無风',
     description: '無风的第一个博客',
     head: [
@@ -8,7 +9,7 @@ module.exports = {
     ],
     themeConfig: {
         // 最后的更新时间
-        lastUpdated: 'Last Updated', 
+        lastUpdated: '更新时间', 
         // logo
         logo: '/assets/img/1.jpeg',
         // 导航
