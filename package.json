@@ -1,22 +1,24 @@
 {
   "name": "blog",
   "version": "1.0.0",
-  "description": "my first blog",
+  "description": "leon's blog",
   "main": "index.js",
   "scripts": {
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs",
+    "dev": "vuepress dev . --open --host \"localhost\"",
+    "build": "vuepress build .",
     "deploy": "bash deploy.sh"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Leon-Amazing/blog.git"
+    "url": "https://gitee.com/leoamazing/blog.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Leon-Amazing/blog/issues"
-  },
-  "homepage": "https://github.com/Leon-Amazing/blog#readme"
+  "dependencies": {
+    "vue-class-component": "^7.2.6",
+    "vuepress": "^1.8.0",
+    "vuepress-plugin-comment": "^0.7.3",
+    "vuepress-theme-reco": "^1.6.1"
+  }
 }
