@@ -1,0 +1,24 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "leon's blog",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vuepress dev . --open --host \"localhost\"",
+    "build": "vuepress build .",
+    "deploy": "bash deploy.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitee.com/leoamazing/blog.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "vue-class-component": "^7.2.6",
+    "vuepress": "^1.8.0",
+    "vuepress-plugin-comment": "^0.7.3",
+    "vuepress-theme-reco": "^1.6.1"
+  }
+}
