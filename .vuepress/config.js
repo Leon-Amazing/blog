@@ -10,17 +10,14 @@ module.exports = {
       "meta", { name: "viewport", content: "width=device-width,initial-scale=1,user-scalable=no" }
     ]
   ],
-  locales: {
-    "/": {
-      "lang": "zh-CN"
-    }
-  },
-  /* 主题 */
+  // 主题和配置 
   theme: "reco",
   themeConfig: {
-    lastUpdated: "上次更新",
+    // 导航栏 Logo
     logo: "/logo.jpg",
-    /* 导航 */
+    // 最后更新时间
+    lastUpdated: "上次更新",
+    // 导航 
     nav: [
       // 首页
       {
@@ -35,18 +32,15 @@ module.exports = {
         "items": [
           {
             "text": "前端",
-            "link": "/categories/frontend/",
-            "icon": "reco-blog"
+            "link": "/categories/frontend/"
           },
           {
             "text": "后端",
-            "link": "/categories/backend/",
-            "icon": "reco-blog"
+            "link": "/categories/backend/"
           },
           {
             "text": "其他",
             "link": "/categories/other/",
-            "icon": "reco-blog"
           }
         ]
       },
@@ -73,9 +67,9 @@ module.exports = {
         "link": "/timeline/",
         "icon": "reco-date"
       },
-      // 简历
+      // 留言板
       {
-        "text": "关于我",
+        "text": "留言板",
         "link": "/resume/",
         "icon": "reco-message"
       },
@@ -94,11 +88,10 @@ module.exports = {
         'api'
       ]
     },
-    // 自动形成侧边导航
+    // 自动形成侧边栏
     subSidebar: "auto",
-    // 博客的模式
-    type: "blog",
     // 博客设置
+    type: "blog",
     blogConfig: {
       "category": {
         "location": 2, // 在导航栏菜单中所占的位置，默认2
@@ -109,12 +102,14 @@ module.exports = {
         "text": "标签"
       }
     },
+    // 搜索功能
     search: true,
     searchMaxSuggestions: 10,
+    // 姓名和头像
     author: "leon",
     authorAvatar: "/avatar.jpg",
     startYear: "2021",
-    /* 评论 */
+    // valine评论,第三方插件 
     valineConfig: {
       showComment: true,
       appId: "ttqIkjQPFQjxNGaefDHCyiN6-gzGzoHsz",// your appId
@@ -123,8 +118,12 @@ module.exports = {
       meta: ['nick', 'mail'],
       placeholder: '请输入你的留言...',
       recordIP: true
-    }
+    },
+    // 模式
+    // mode: 'dark',
+    // modePicker: true
   },
+  // 代码块显示行号
   markdown: {
     lineNumbers: true
   }
