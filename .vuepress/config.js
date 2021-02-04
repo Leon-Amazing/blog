@@ -39,25 +39,12 @@ module.exports = {
             "link": "/categories/backend/"
           },
           {
-            "text": "其他",
-            "link": "/categories/other/",
-          }
-        ]
-      },
-      // 项目
-      {
-        "text": "项目",
-        "icon": "reco-blog",
-        "items": [
-          {
-            "text": "项目1",
-            "link": "https://www.baidu.com/",
-            "icon": "reco-blog"
+            "text": "项目",
+            "link": "/categories/projects/"
           },
           {
-            "text": "项目2",
-            "link": "https://music.163.com/",
-            "icon": "reco-blog"
+            "text": "其他",
+            "link": "/categories/other/",
           }
         ]
       },
@@ -73,11 +60,27 @@ module.exports = {
         "link": "/resume/",
         "icon": "reco-message"
       },
-      // GitHub
+      // 关于我
       {
-        "text": "github",
-        "link": "https://github.com/Leon-Amazing",
-        "icon": "reco-github"
+        "text": "联系我",
+        "icon": "reco-account",
+        "items": [
+          {
+            "text": "github",
+            "link": "https://github.com/Leon-Amazing",
+            "icon": "reco-github"
+          },
+          {
+            "text": "码云",
+            "link": "https://gitee.com/leoamazing",
+            "icon": "reco-mayun"
+          },
+          {
+            "text": "思否",
+            "link": "https://segmentfault.com/u/wangxiansheng_5eef3c01bb037",
+            "icon": "reco-sf"
+          }
+        ]
       }],
     // 侧边栏
     sidebar: {
