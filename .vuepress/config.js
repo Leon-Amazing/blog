@@ -3,7 +3,7 @@ module.exports = {
   title: "Leon你今天学习了吗",
   description: "welcome to leon's blog !!!",
   head: [
-    ['link', { rel: 'icon', href: '/favicon.ico' }],
+    ['link', { rel: 'icon', href: '/logo.png' }],
     ['meta', { name: 'author', content: 'leon' }],
     ['meta', { name: 'keywords', content: 'vuepress写博客' }],
     [
@@ -14,7 +14,7 @@ module.exports = {
   theme: "reco",
   themeConfig: {
     // 导航栏 Logo
-    logo: "/logo.jpg",
+    logo: "/logo.png",
     // 最后更新时间
     lastUpdated: "上次更新",
     // 导航 
