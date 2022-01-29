@@ -3,7 +3,7 @@ module.exports = {
   title: "Leon你今天学习了吗",
   description: "welcome to leon's blog !!!",
   head: [
-    ['link', { rel: 'icon', href: '/logo.png' }],
+    ['link', { rel: 'icon', href: '/favicon.ico' }],
     ['meta', { name: 'author', content: 'leon' }],
     ['meta', { name: 'keywords', content: 'vuepress写博客' }],
     [
