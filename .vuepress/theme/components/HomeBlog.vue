@@ -20,7 +20,7 @@
         </ModuleTransition>
 
         <!-- 箭头动画 -->
-        <a href="#anchor" class="scroll-down bounce-enter-active down-arrow"></a>
+        <!-- <a href="#anchor" class="scroll-down bounce-enter-active down-arrow"></a> -->
       </div>
     </div>
 
@@ -108,13 +108,16 @@ export default {
       return this.$frontmatter.heroImageStyle || {}
     },
     bgImageStyle() {
+      const imgs = ['0.jpg', '1.jpeg', '2.jpg', '3.jpeg', '4.jpeg'];
+      // const index = Math.floor(Math.random() * 5);
+      const index = 0;
       const initBgImageStyle = {
         textAlign: 'center',
         overflow: 'hidden',
         background: `
           url(${this.$frontmatter.bgImage
             ? this.$withBase(this.$frontmatter.bgImage)
-            : require('../images/bg.jpg')}) center/cover no-repeat
+            : require(`../images/bg/${imgs[index]}`)}) center bottom/cover no-repeat
         `
       }
       const {
@@ -134,9 +137,13 @@ export default {
       radius: 15,
       density: 0.3,
       color: 'rgba(255,255,255, .4)',
-      // color: 'random',
+      color: 'random',
       clearOffset: 0.2
     })
+    console.log(
+      `\n%c欢迎来到我的博客🎮我是慕拾壹！🚀`, 
+      'color:#6366f1; background:#0b1021; font-size:1.5rem; padding:0.15rem 0.25rem; margin: 1rem auto; font-family: Rockwell; border: 2px solid #6366f1; border-radius: 4px;font-weight: bold; text-shadow: 1px 1px 1px #00af87bf;'
+    );
   },
   methods: {
     // 获取当前页码
@@ -170,6 +177,36 @@ export default {
 </script>
 
 <style lang="stylus">
+
+@keyframes blink {
+  0%,
+  75%,
+  100% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+}
+
+@keyframes blur {
+  0% {
+    filter: blur(5px);
+  }
+
+  25% {
+    filter: blur(4px);
+  }
+
+  75% {
+    filter: blur(1px);
+  }
+
+  100% {
+    filter: blur(0);
+  }
+}
+
 .home-blog {
   padding: 0;
   margin: 0px auto;
@@ -183,6 +220,8 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all 0.5s ease-in-out;
+    animation: blur 2.5s;
 
     .hero-img {
       max-width: 300px;
@@ -199,6 +238,11 @@ export default {
       margin: 1.8rem auto;
       font-size: 1.6rem;
       line-height: 1.3;
+      &:after {
+        content: " |";
+        animation: blink 1s infinite;
+        animation-timing-function: step-end;
+      }
     }
   }
 
@@ -386,10 +430,11 @@ export default {
   height: 34px;
   font-size: 34px;
   text-align: center;
+  cursor: pointer;
 }
 
 .bounce-enter-active {
-  animation: bounce-in 4s 2s infinite;
+  animation: bounce-in 3s 2s infinite;
 }
 
 @keyframes bounce-in {

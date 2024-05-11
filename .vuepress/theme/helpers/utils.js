@@ -291,9 +291,9 @@ export function circleMagic(options) {
 
     //  create canvas element
 
-    initCanvas()
+    initCanvas(width, height)
     canvas = document.getElementById('homeTopCanvas')
-    canvas.width = width
+    canvas.width = width - 5
     canvas.height = height
     canvas.style.position = 'absolute'
     canvas.style.left = '0'

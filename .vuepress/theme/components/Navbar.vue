@@ -1,5 +1,7 @@
 <template>
-  <header class="navbar">
+  <header class="navbar" ref="navbar" :class="{ fixed: navbarFixed }"
+    @mouseenter="toggleNavBarBg(true)"
+    @mouseleave="toggleNavBarBg(false)">
     <SidebarButton @toggle-sidebar="$emit('toggle-sidebar')" />
 
     <router-link :to="$localePath" class="home-link">
@@ -33,8 +35,25 @@ export default {
 
   data() {
     return {
+      navbarFixed: false,
+      isHome: true,
       linksWrapMaxWidth: null
     }
+  },
+
+  watch: {
+    $route: {
+      handler(to, from) {
+        if (to.path == "/") {
+          this.isHome = true;
+          this.navbarFixed = false;
+          return;
+        }
+        this.isHome = false;
+        this.navbarFixed = true;
+      },
+      immediate: true,
+    },
   },
 
   mounted() {
@@ -50,6 +69,7 @@ export default {
     }
     handleLinksWrapWidth()
     window.addEventListener('resize', handleLinksWrapWidth, false)
+    window.addEventListener("scroll", this.throttle(this.handleNavbarBg), false)
   },
 
   computed: {
@@ -81,7 +101,16 @@ export default {
           timer = setTimeout(func, remaining)
         }
       }
-    }
+    },
+    toggleNavBarBg(isFocus) {
+      if (this.$refs.navbar.classList.contains("fixed")) return;
+      if (isFocus) this.$refs.navbar.classList.add("focus");
+      else this.$refs.navbar.classList.remove("focus");
+    },
+    handleNavbarBg() {
+      if (!this.isHome) return;
+      this.navbarFixed = window.pageYOffset > window.innerHeight - 60;
+    },
   }
 }
 

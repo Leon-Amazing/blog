@@ -184,6 +184,7 @@ export default defineComponent({
     left: 0;
     right: 0;
     margin: auto;
+    width: calc(100vw - 5px) !important;
   }
 
   .password-wrapper-out {

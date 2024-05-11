@@ -1,7 +1,7 @@
 ---
 home: true
-heroText: 'Leon-Amazing'
-tagline: 'The world kisses me bitterly, wants me to sing back'
+heroText: '富贵必从勤苦得，男儿须读五车书'
+tagline: 'Wealth and riches come from hard work and hard labor, and men must learn from books.'
 bgImageStyle: {
   height: '100vh',
   color: '#fff',

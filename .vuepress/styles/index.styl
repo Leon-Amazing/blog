@@ -1,0 +1,291 @@
+@font-face {
+  font-family: GLOBAL_FONT;
+  src: url('/blog/fonts/Alimama_DongFangDaKai_Regular.woff') format('woff'), url('/blog/fonts/Alimama_DongFangDaKai_Regular.woff2') format('woff'), url('/blog/fonts/Alimama_DongFangDaKai_Regular.ttf') format('truetype');
+}
+
+#app .theme-container {
+   .reco-blog{
+    color: #fc532f !important;
+    margin-right: 2px;
+  }
+
+  .reco-mayun{
+    color: #d90013 !important;
+  }
+
+  .reco-github {
+    color: #24292f !important;
+  }
+
+  .reco-juejin {
+    color: #1e80ff !important;
+  }
+
+  .reco-sf{
+    color: #00965e !important;
+  }
+}
+
+.loading-wrapper, .hero, .info-wrapper, .site-name {
+  font-family: GLOBAL_FONT;
+}
+
+.hero h1{
+  text-shadow: -2px 0 #666, 2px 0 #666, 0 2px #666, 0 -2px #666;
+}
+
+.personal-info-wrapper{
+  img {
+    cursor: pointer;
+    
+     &:hover{
+      transform: rotate(666turn);
+      transition-duration: 59s;
+      transition-timing-function: cubic-bezier(.34, 0, .84, 1)
+     }
+  }
+}
+
+.navbar {
+  font-family: NOXONE_GLOBAL_FONT;
+  transition: background 0.35s ease-out, backdrop-filter 0.35s ease-out;
+  border-radius: 0 0 1rem 1rem;
+  box-shadow: none !important;
+  background: rgba(255, 255, 255, 0) !important;
+
+  .iconfont,.icon.outbound {
+    color: #fff;
+  }
+
+  .home-link {
+    .logo {
+      margin-right: 8px;
+      transition: all 0.3s ease-in;
+    }
+
+    .site-name {
+      font-family: NOXONE_FONT1;
+      transition: all 0.49s ease-in;
+      color: #333;
+      text-shadow: -2px 0 #fefefe, 2px 0 #fefefe, 0 2px #fefefe, 0 -2px #fefefe;
+      color: #fefefe;
+      text-shadow: -2px 0 #333, 2px 0 #333, 0 2px #333, 0 -2px #333;
+      font-weight: 600;
+      font-size: 1.4rem;
+    }
+  }
+
+  .links {
+    background-color: rgba(255, 255, 255, 0) !important;
+
+    .color-picker {
+      display: none;
+    }
+
+    .search-box {
+      transition: all 0.2s ease;
+
+      .iconfont.reco-search {
+        transition: all 0.2s ease;
+        color: #fff;
+      }
+
+      input {
+        transition: all 0.2s ease;
+        border-radius: 1rem;
+        background: rgba(255, 255, 255, 0.3) !important;
+      }
+
+      input.focused {
+        border-color: $accentColor !important;
+      }
+
+      input.focused + .reco-search {
+        color: $accentColor !important;
+      }
+    }
+
+    .nav-links {
+      .nav-item {
+        i {
+          color: #eee !important;
+          transition: all 0.3s ease;
+        }
+
+        .nav-link {
+          color: #eee !important;
+          transition: all 0.3s ease;
+        }
+
+        .dropdown-title {
+          color: #eee !important;
+          transition: all 0.3s ease;
+
+          .arrow {
+            border-top: 6px solid #eee !important;
+            transition: all 0.3s ease;
+          }
+        }
+
+        .dropdown-item {
+          .nav-link {
+            color: #555 !important;
+
+            &:hover {
+              transition: all 0.3s ease;
+              color: $accentColor !important;
+            }
+          }
+        }
+
+        &:hover {
+          .dropdown-item {
+            .nav-link {
+              color: #555 !important;
+
+              &:hover {
+                color: $accentColor !important;
+              }
+            }
+          }
+
+          i {
+            color: $accentColor !important;
+          }
+
+          .nav-link {
+            color: $accentColor !important;
+            transition: all 0.3s ease;
+          }
+
+          .dropdown-title {
+            color: $accentColor !important;
+
+            .arrow {
+              border-top: 6px solid $accentColor !important;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .sidebar-button {
+    transition: all 0.3s ease-in;
+    color: #fefefe;
+  }
+}
+
+.navbar.focus, .navbar.fixed {
+  transition: background 0.3s ease-in, backdrop-filter 0.3s ease-in;
+  position: fixed !important;
+  background: rgba(255, 255, 255, 0.7) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  backdrop-filter: blur(10px) !important;
+  box-shadow: var(--box-shadow) !important;
+
+  .iconfont,.icon.outbound {
+    color: currentColor;
+  }
+
+  .home-link {
+    .logo {
+      transition: all 0.3s ease-in;
+      transform: rotate(360deg) scale(1.2);
+      margin-left: 40px;
+      margin-right: 20px;
+    }
+
+    .site-name {
+      color: #333;
+      text-shadow: -2px 0 #fefefe, 2px 0 #fefefe, 0 2px #fefefe, 0 -2px #fefefe;
+      transform: scale(1.2);
+    }
+  }
+
+  .sidebar-button {
+    color: #555;
+  }
+
+  .links {
+    --text-color: #242424;
+    --text-color-sub: #7f7f7f;
+    .search-box {
+      transition: all 0.2s ease;
+
+      .iconfont.reco-search {
+        transition: all 0.2s ease;
+        color: #555;
+      }
+
+      input {
+        transition: all 0.2s ease;
+        border-color: #555;
+      }
+    }
+
+    .nav-links {
+      .nav-item {
+        i {
+          color: #555 !important;
+          transition: all 0.3s ease;
+        }
+
+        .nav-link {
+          color: #555 !important;
+          transition: all 0.3s ease;
+        }
+
+        .dropdown-title {
+          color: #555 !important;
+          transition: all 0.3s ease;
+
+          .arrow {
+            border-top: 6px solid #555 !important;
+            transition: all 0.3s ease;
+          }
+        }
+
+        .dropdown-item {
+          .nav-link {
+            color: #555 !important;
+
+            &:hover {
+              transition: all 0.3s ease;
+              color: $accentColor !important;
+            }
+          }
+        }
+
+        &:hover {
+          .dropdown-item {
+            .nav-link {
+              color: #555 !important;
+
+              &:hover {
+                color: $accentColor !important;
+              }
+            }
+          }
+
+          i {
+            color: $accentColor !important;
+          }
+
+          .nav-link {
+            color: $accentColor !important;
+            transition: all 0.3s ease;
+          }
+
+          .dropdown-title {
+            color: $accentColor !important;
+
+            .arrow {
+              border-top: 6px solid $accentColor !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
