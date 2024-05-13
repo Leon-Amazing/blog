@@ -30,31 +30,31 @@ module.exports = {
         items: [
           {
             text: '前端助手',
-            link: 'http://leoamazing_admin.gitee.io/navigation-library/tool',
+            link: 'https://leon-amazing.github.io/navigation-library/tool',
           },
           {
             text: '前端书籍',
-            link: 'http://leoamazing.gitee.io/frontend-sharing',
+            link: 'https://leon-amazing.github.io/frontend-book',
           },
           {
             text: '前端实践',
-            link: 'http://leoamazing_admin.gitee.io/project-practice',
+            link: 'https://leon-amazing.github.io/project-practice',
           },
           {
             text: '前端面试',
-            link: 'http://leoamazing.gitee.io/interview',
+            link: 'https://leon-amazing.github.io/interview',
           },
           {
             text: 'css3新世界',
-            link: 'http://leoamazing.gitee.io/css3',
+            link: 'https://leon-amazing.github.io/css3',
           },
           {
             text: 'react16/18',
-            link: 'http://leoamazing.gitee.io/dumi',
+            link: 'https://leon-amazing.github.io/react',
           },
           {
             text: '数据可视化',
-            link: 'http://leoamazing.gitee.io/visual',
+            link: 'https://leon-amazing.github.io/visual',
           },
         ],
       },
@@ -96,7 +96,7 @@ module.exports = {
         items: [
           {
             text: '简历',
-            link: 'http://leoamazing.gitee.io/resume',
+            link: 'https://leon-amazing.github.io/resume',
             icon: 'reco-blog',
           },
           {
